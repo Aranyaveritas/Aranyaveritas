@@ -14,7 +14,7 @@
   
   
   <title>
-    关于ssh的配对的详解 |
+    关于新设备克隆仓库后注意事项 |
     
     玥无酱
   </title>
@@ -24,17 +24,20 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta name="description" content="关于ssh的配对的详解以及各种零碎小关键点 生成ssh秘钥 1234567 ssh-keygen -t rsa -C &quot;xx@邮箱.com&quot;# 尽量与生成秘钥邮箱你熟知 Enter file in which to save the key (&#x2F;c&#x2F;users&#x2F;用户&#x2F;.ssh&#x2F;id_rsa):*指定路径格式和后面的.ssh&#x2F;id_rsa一样*  #不改enter Enter p">
+  <meta name="description" content="正常clone后，ssh秘钥登记托管连接正常，git仓库的身份验证无误，可同步本地的commit但是并未同步仓库内-子模块，如：hexo-theme-reimu[主题子模块]，后续会出现的故障，如:[本地生成服务器，缺少主题layout的index，个别的功能因为没有主题编写语言的组件支持，hexo框架不识别，导致渲染失败，出现404错误，或者渲染失败，出现乱码，导致页面无法正常显示，] 如这次的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于ssh的配对的详解">
-<meta property="og:url" content="http://blog.aranya.us.kg/2024/02/08/%E5%85%B3%E4%BA%8Essh%E7%9A%84%E9%85%8D%E5%AF%B9%E7%9A%84%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:title" content="关于新设备克隆仓库后注意事项">
+<meta property="og:url" content="http://blog.aranya.us.kg/2024/07/30/%E5%85%B3%E4%BA%8E%E6%96%B0%E8%AE%BE%E5%A4%87%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">
 <meta property="og:site_name" content="玥无酱">
-<meta property="og:description" content="关于ssh的配对的详解以及各种零碎小关键点 生成ssh秘钥 1234567 ssh-keygen -t rsa -C &quot;xx@邮箱.com&quot;# 尽量与生成秘钥邮箱你熟知 Enter file in which to save the key (&#x2F;c&#x2F;users&#x2F;用户&#x2F;.ssh&#x2F;id_rsa):*指定路径格式和后面的.ssh&#x2F;id_rsa一样*  #不改enter Enter p">
+<meta property="og:description" content="正常clone后，ssh秘钥登记托管连接正常，git仓库的身份验证无误，可同步本地的commit但是并未同步仓库内-子模块，如：hexo-theme-reimu[主题子模块]，后续会出现的故障，如:[本地生成服务器，缺少主题layout的index，个别的功能因为没有主题编写语言的组件支持，hexo框架不识别，导致渲染失败，出现404错误，或者渲染失败，出现乱码，导致页面无法正常显示，] 如这次的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-08T00:12:46.000Z">
+<meta property="og:image" content="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/zimokuai.png">
+<meta property="og:image" content="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/juti.png">
+<meta property="article:published_time" content="2024-07-30T15:47:09.000Z">
 <meta property="article:modified_time" content="2024-07-30T16:43:28.401Z">
 <meta property="article:author" content="玥无酱">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/zimokuai.png">
   
     <link rel="alternate" href="/atom.xml" title="玥无酱" type="application/atom+xml">
   
@@ -155,7 +158,7 @@
 </div>
 <header id="header">
   
-    <img fetchpriority="high" src="/images/banner.jpg" alt="关于ssh的配对的详解">
+    <img fetchpriority="high" src="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/juti.png" alt="关于新设备克隆仓库后注意事项">
   
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
@@ -164,7 +167,7 @@
           
           
             <a href="/" id="logo">
-              <h1>关于ssh的配对的详解</h1>
+              <h1>关于新设备克隆仓库后注意事项</h1>
             </a>
           
         
@@ -188,7 +191,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Essh%E7%9A%84%E9%85%8D%E5%AF%B9%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BB%A5%E5%8F%8A%E5%90%84%E7%A7%8D%E9%9B%B6%E7%A2%8E%E5%B0%8F%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">关于ssh的配对的详解以及各种零碎小关键点</span></a></li></ol>
+        
       
   </div>
 </div>
@@ -264,12 +267,12 @@
 </aside>
 
           
-          <section id="main"><article id="post-关于ssh的配对的详解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-关于新设备克隆仓库后注意事项" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     <div class="article-meta">
       <div class="article-date wow slideInLeft">
-  <a href="/2024/02/08/%E5%85%B3%E4%BA%8Essh%E7%9A%84%E9%85%8D%E5%AF%B9%E7%9A%84%E8%AF%A6%E8%A7%A3/" class="article-date-link">
-    <time datetime="2024-02-08T00:12:46.000Z" itemprop="datePublished">2024-02-08</time>
+  <a href="/2024/07/30/%E5%85%B3%E4%BA%8E%E6%96%B0%E8%AE%BE%E5%A4%87%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="article-date-link">
+    <time datetime="2024-07-30T15:47:09.000Z" itemprop="datePublished">2024-07-30</time>
   </a>
 </div>
 
@@ -281,18 +284,31 @@
 
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="关于ssh的配对的详解以及各种零碎小关键点"><a href="#关于ssh的配对的详解以及各种零碎小关键点" class="headerlink" title="关于ssh的配对的详解以及各种零碎小关键点"></a>关于ssh的配对的详解以及各种零碎小关键点</h1><p> 生成ssh秘钥<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"> ssh-keygen -t rsa -C <span class="hljs-string">&quot;xx@邮箱.com&quot;</span><br><span class="hljs-comment"># 尽量与生成秘钥邮箱你熟知</span><br> Enter file <span class="hljs-keyword">in</span> <span class="hljs-built_in">which</span> to save the key (/c/users/用户/.ssh/id_rsa):*指定路径格式和后面的.ssh/id_rsa一样*  <span class="hljs-comment">#不改enter</span><br> Enter passphrase：(输入密码)    <span class="hljs-comment">#无enter</span><br> 二次确认：      <span class="hljs-comment">#无enter</span><br> <br> 私钥id_rsa 公钥id_rsa.pub<br></code></pre></td></tr></table></figure><br> 将公钥放在想要放置的平台，如github<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">settings——Deploy Keys   <span class="hljs-comment">#仓库级(仅限仓库)</span><br>SSH and GPS keys     <span class="hljs-comment">#账户级(对所有仓库都有读写控制权) </span><br></code></pre></td></tr></table></figure><br> 测试ssh联通性<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure><br>配置Git的用户名和邮箱 在你想要的仓库使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;xxxxx&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;xxxxxx@.xxcom&quot;</span><br><span class="hljs-comment">#注意！！--global是全局级 --local是项目仓库级 --system是系统级[!] </span><br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
+        <p>正常clone后，ssh秘钥登记托管连接正常，git仓库的身份验证无误，可同步本地的commit<br>但是并未同步仓库内-子模块，如：hexo-theme-reimu[主题子模块]，后续会出现的故障，<br>如:[本地生成服务器，缺少主题layout的index，个别的功能因为没有主题编写语言的组件支持，hexo框架不识别，导致渲染失败，出现404错误，或者渲染失败，出现乱码，导致页面无法正常显示，]</p>
+<p>如这次的故障<br><img src="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/zimokuai.png"><br><img src="https://imgpico.obs.cn-east-3.myhuaweicloud.com/aranya-img/juti.png"></p>
+<p><strong>上面的的友链的申请留言格式因为没有主题的组件解析支持，出现渲染生成文件报错，以及下方的小伙伴制作者实例友链跳转，也被识别错误，被hexo框架所不支持，出现报错”for matNunjucks Error”</strong></p>
+<p>原因：</p>
+<ol>
+<li>子模块未安装</li>
+<li>依赖未安装</li>
+<li>静态文件未生成</li>
+<li>部署未完成</li>
+<li>访问未完成</li>
+</ol>
+<p>解决办法：</p>
+<ol>
+<li><p>重新clone子模块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">git submodule update --init --recursive<br></code></pre></td></tr></table></figure></li>
+<li><p>重新安装依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">npm install<br></code></pre></td></tr></table></figure></li>
+<li><p>重新生成静态文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">hexo clean<br>hexo g<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>重新访问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">hexo s<br>https://aranya-1.github.io/<br></code></pre></td></tr></table></figure>
+<p>具体原理说明<br><strong>因为自己使用的Icarus主题是作为Git子模块关联在博客项目中的，</strong><br><strong>最开始使用主题时(未魔改前)Git子模块版本假设是A，主题魔改后，</strong><br><strong>作为Git子模块的主题项目最新版本假设是B。</strong><br><strong>但是博客项目并不知道作为git子模块的主题项目已经有了新版本，还是引用的A。</strong><br><strong>因此要想将魔改版本的主题应用，就需要更新一下子模块的引用信息，将子模块更新到最新版本。</strong></p>
+</li>
+</ol>
 
       
     </div>
@@ -313,13 +329,16 @@
     
       <div class="article-nav-link-wrap article-nav-link-left">
         
-          <img data-src="https://static2.appinn.com/images/202303/const-me-whisper.jpg!o" data-sizes="auto" alt="关于HomeAIWhisper-–-本地语音转文字工具" class="lazyload">
+          
+          
+            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="个人随笔" class="lazyload">
+          
         
-        <a href="/2024/06/23/%E5%85%B3%E4%BA%8EHomeAIWhisper-%E2%80%93-%E6%9C%AC%E5%9C%B0%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%E5%B7%A5%E5%85%B7/"></a>
+        <a href="/2024/07/31/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
           
-            关于HomeAIWhisper-–-本地语音转文字工具
+            个人随笔
           
         </h3>
       </div>
@@ -327,16 +346,13 @@
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
-        
-        
-          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="git笔记" class="lazyload">
-        
+        <img data-src="https://static2.appinn.com/images/202303/const-me-whisper.jpg!o" data-sizes="auto" alt="关于HomeAIWhisper-–-本地语音转文字工具" class="lazyload">
       
-      <a href="/2024/02/08/git%E7%AC%94%E8%AE%B0/"></a>
+      <a href="/2024/06/23/%E5%85%B3%E4%BA%8EHomeAIWhisper-%E2%80%93-%E6%9C%AC%E5%9C%B0%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%E5%B7%A5%E5%85%B7/"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
         
-          git笔记
+          关于HomeAIWhisper-–-本地语音转文字工具
         
       </h3>
     </div>
@@ -409,7 +425,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Essh%E7%9A%84%E9%85%8D%E5%AF%B9%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BB%A5%E5%8F%8A%E5%90%84%E7%A7%8D%E9%9B%B6%E7%A2%8E%E5%B0%8F%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">关于ssh的配对的详解以及各种零碎小关键点</span></a></li></ol>
+        
       
   </div>
 </div>
