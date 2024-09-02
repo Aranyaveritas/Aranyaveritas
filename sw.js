@@ -1,4 +1,4 @@
-const VERSION = "1725285244137";
+const VERSION = "1725288380815";
 const PreCache = [
   "/images/taichi.png",
   "/images/banner.webp",
