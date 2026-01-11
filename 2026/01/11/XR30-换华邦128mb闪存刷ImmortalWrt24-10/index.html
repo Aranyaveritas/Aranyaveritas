@@ -1,0 +1,645 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_09mhdxci6yrk';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ"};</script>
+  
+  
+  <title>
+    XR30 换华邦128mb闪存刷ImmortalWrt24.10 |
+    
+    Aranya-玥无酱
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+  
+<link rel="stylesheet" href="/css/loader.css">
+
+  <meta name="description" content="XR30 换华邦 128mb Winbond W25N01GVZEIG    前置救砖 拆取原有的兆易创新  GD5F1GM7UE 换为  Winbond W25N01GVZEIG 1Gb NAND Flash 3.3v 保存有原厂cmcc备份 tmp 的 preloader.nand.bl2  和  Factory 在你电脑主机插入一根网线备用，后续刷完连接设备，修改网关ipv4地址等   路由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XR30 换华邦128mb闪存刷ImmortalWrt24.10">
+<meta property="og:url" content="http://blog.205996.xyz/2026/01/11/XR30-%E6%8D%A2%E5%8D%8E%E9%82%A6128mb%E9%97%AA%E5%AD%98%E5%88%B7ImmortalWrt24-10/index.html">
+<meta property="og:site_name" content="Aranya-玥无酱">
+<meta property="og:description" content="XR30 换华邦 128mb Winbond W25N01GVZEIG    前置救砖 拆取原有的兆易创新  GD5F1GM7UE 换为  Winbond W25N01GVZEIG 1Gb NAND Flash 3.3v 保存有原厂cmcc备份 tmp 的 preloader.nand.bl2  和  Factory 在你电脑主机插入一根网线备用，后续刷完连接设备，修改网关ipv4地址等   路由">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://youke3.picui.cn/s1/2026/01/11/69638aa1591f4.jpg">
+<meta property="article:published_time" content="2026-01-11T11:19:36.000Z">
+<meta property="article:modified_time" content="2026-01-11T11:38:02.396Z">
+<meta property="article:author" content="Aranya-玥无酱">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://youke3.picui.cn/s1/2026/01/11/69638aa1591f4.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Aranya-玥无酱" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css">
+
+  
+  
+  
+  
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"></script>
+
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/wowjs@1.1.3/css/libs/animate.css">
+
+    
+<script src="https://npm.webcache.cn/wowjs@1.1.3/dist/wow.min.js"></script>
+
+    <script>
+      new WOW({
+        offset: 0,
+        mobile: true,
+        live: false
+      }).init();
+    </script>
+  
+  
+    <script src="/sw.js"></script>
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+          <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+        </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    const startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    const endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="display: none; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/">首页</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/archives">归档</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/about">关于</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/friend">友链</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    <img fetchpriority="high" src="/images/banner.jpg" alt="XR30 换华邦128mb闪存刷ImmortalWrt24.10">
+  
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div id="logo-wrap">
+        
+          
+          
+            <a href="/" id="logo">
+              <h1>XR30 换华邦128mb闪存刷ImmortalWrt24.10</h1>
+            </a>
+          
+        
+      </div>
+      
+        
+        <h2 id="subtitle-wrap">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="outer">
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrap wow fadeInRight wrap-sticky">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">XR30 换华邦 128mb Winbond W25N01GVZEIG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%95%91%E7%A0%96"><span class="toc-number">2.</span> <span class="toc-text">前置救砖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%90%8E%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%AD%89%E5%BE%85%E6%8F%A1%E6%89%8B%E4%BF%A1%E6%81%AF%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">1.运行命令后会出现等待握手信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%84%B6%E5%90%8E%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E7%94%B5%E5%BC%80%E6%9C%BA%EF%BC%8C%E6%8F%A1%E6%89%8B%E6%88%90%E5%8A%9FCMD%E4%BC%9A%E8%BE%93%E5%87%BAsending-payload%E4%BF%A1%E6%81%AF%E5%BC%80%E5%A7%8B%E5%8F%91%E9%80%81bl2%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">2.然后路由器上电开机，握手成功CMD会输出sending payload信息开始发送bl2：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%91%E9%80%81%E5%AE%8C%E6%88%90%E5%8A%A0%E8%BD%BDbl2%E4%BC%9A%E8%BE%93%E5%87%BA%E4%BF%A1%E6%81%AF%E5%90%8C%E6%97%B6%E5%BC%80%E5%A7%8B%E5%8F%91%E9%80%81fip%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">3.发送完成加载bl2会输出信息同时开始发送fip：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-fip%E5%8A%A0%E8%BD%BD%E5%AE%8C%E5%90%8E%E8%BE%93%E5%87%BA%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">4.fip加载完后输出：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A4%E6%97%B6%E7%A8%8B%E5%BA%8F%E5%B7%B2%E7%BB%8F%E6%89%A7%E8%A1%8C%E5%AE%8C%EF%BC%8C%E5%B7%B2%E7%BB%8F%E5%8A%A0%E8%BD%BDuboot%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E6%8C%89reset%E4%BC%9A%E7%9B%B4%E6%8E%A5%E5%90%AF%E5%8A%A8%E5%9B%BA%E4%BB%B6%EF%BC%8C%E6%8C%89reset%E5%B0%B1%E8%BF%9B%E5%85%A5uboot-webui%E6%81%A2%E5%A4%8D%E5%88%B7%E7%A0%96%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">2.4.0.1.</span> <span class="toc-text">此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot webui恢复刷砖的文件。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Xshell%E4%B8%AD%E7%82%B9%E5%87%BB%E4%B9%8B%E5%89%8D%E7%9A%84%E7%AB%AF%E5%8F%A3%E4%BC%9A%E8%AF%9D-%E7%84%B6%E5%90%8E%E7%AA%97%E5%8F%A3%E5%86%85%E5%9B%9E%E8%BD%A6%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E5%8F%98%E4%B8%BAMT7981-XR30-%E7%AB%AF%E5%8F%A3%E7%9B%91%E6%8E%A7%E5%90%8C%E6%97%B6%E9%95%BF%E6%8C%89reset%E9%94%AE-%E7%BD%91%E5%8F%A3%E4%B8%8A%E6%96%B9-10%E7%A7%92%EF%BC%8C%E7%84%B6%E5%90%8E%E5%B0%86%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E4%B8%BB%E6%9C%BA%E7%9A%84%E7%BD%91%E7%BA%BF%E5%8F%A6%E4%B8%80%E7%AB%AF%E6%8F%92%E5%85%A5%E4%BB%BB%E6%84%8F-LAN"><span class="toc-number">2.5.</span> <span class="toc-text">在Xshell中点击之前的端口会话 然后窗口内回车，查看是否变为MT7981&gt;  XR30 端口监控同时长按reset键 [网口上方] 10秒，然后将连接电脑主机的网线另一端插入任意 LAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95ImmortalWRT%E5%B9%B6%E5%BC%80%E5%90%AFSSH"><span class="toc-number">2.6.</span> <span class="toc-text">登录ImmortalWRT并开启SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">2.7.</span> <span class="toc-text">查看当前分区信息**</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%86%99%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%8E%82BL2%E5%88%86%E5%8C%BA%EF%BC%88mtd0%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">刷写恢复原厂BL2分区（mtd0）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%8E%82Factory"><span class="toc-number">4.</span> <span class="toc-text">恢复原厂Factory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AF%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">重启路由器</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/reimu.gif" data-sizes="auto" alt="Aranya-玥无酱" class="lazyload">
+  <div class="sidebar-author-name">Aranya-玥无酱</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class=icon-github>
+      <a href=https://github.com/Aranyaveritas itemprop="url" target="_blank" aria-label="github"></a>
+    </div>
+  
+    <div class=icon-bilibili>
+      <a href=https://space.bilibili.com/396145021/ itemprop="url" target="_blank" aria-label="bilibili"></a>
+    </div>
+  
+    <div class=icon-discord>
+      <a href=https://discordapp.com/users/yourname itemprop="url" target="_blank" aria-label="discord"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+    
+    
+      <div class="sidebar-btn-wrapper" style="position:static">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  </div>
+
+  
+</aside>
+
+          
+          <section id="main"><article id="post-XR30-换华邦128mb闪存刷ImmortalWrt24-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <div class="article-meta">
+      <div class="article-date wow slideInLeft">
+  <a href="/2026/01/11/XR30-%E6%8D%A2%E5%8D%8E%E9%82%A6128mb%E9%97%AA%E5%AD%98%E5%88%B7ImmortalWrt24-10/" class="article-date-link">
+    <time datetime="2026-01-11T11:19:36.000Z" itemprop="datePublished">2026-01-11</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 align="center">XR30 换华邦 128mb Winbond W25N01GVZEIG</h2>  
+
+<h2 id="前置救砖"><a href="#前置救砖" class="headerlink" title="前置救砖"></a>前置救砖</h2><ul>
+<li>拆取原有的兆易创新  GD5F1GM7UE 换为  Winbond W25N01GVZEIG 1Gb NAND Flash 3.3v</li>
+<li>保存有原厂cmcc备份 <strong>tmp</strong> 的 preloader.nand.bl2  和  Factory</li>
+<li>在你电脑主机插入一根网线备用，后续刷完连接设备，修改网关ipv4地址等</li>
+</ul>
+<hr>
+<p>路由器断电，使用 <em><strong>USB转TTL</strong></em>（建议使用3.3V电平的）连接路由器TTL接口。<br>运行“打开设备管理器命令.bat”在设备管理器查看USB转TTL对应的COM口号。这个COM口不能被其他程序占用。<br>CH340<br>GND-GND<br>RX-Tx<br>TX-Rx<br>3.3[vcc]不接<br><img src="https://youke3.picui.cn/s1/2026/01/11/69638aa1591f4.jpg" alt="XR30 TTL接线顺序.jpg"></p>
+<hr>
+<p>Xshell 工具内新建会话 新建会话-&gt;连接-&gt;<code>串口对应 COM x</code> &#x2F; <code>波特率 115200</code>  </p>
+<p>将<code>Xshell断开[取消占用端口]</code> 新建一个本地会话  </p>
+<p><strong>在XR30\MT798XTTL文件夹内右键此处终端</strong>  </p>
+<p>手动运行<code>mtk_uartboot</code>命令，详见<code>mtk_uartboot</code>文件夹里的教程。COM x &lt;对应COM端口&gt;<br>fib.bin对应你放置在<code>mtk_uartboot</code>中的 <code>mt7981_cmcc_xr30-fip-fixed-parts.bin</code>文件，修改名字为<code>fib.bin </code> </p>
+<blockquote>
+<p>.\mtk_uartboot.exe -s <em><strong>COM3</strong></em> -p .\mt7981\mt7981-ddr4-bl2.bin -a -f <em><strong>fip.bin</strong></em> –brom-load-baudrate 115200 –bl2-load-baudrate 115200</p>
+</blockquote>
+<h3 id="1-运行命令后会出现等待握手信息："><a href="#1-运行命令后会出现等待握手信息：" class="headerlink" title="1.运行命令后会出现等待握手信息："></a>1.运行命令后会出现等待握手信息：</h3><p>mtk_uartboot - 0.1.1<br>Using serial port: COM3<br>Handshake…</p>
+<h3 id="2-然后路由器上电开机，握手成功CMD会输出sending-payload信息开始发送bl2："><a href="#2-然后路由器上电开机，握手成功CMD会输出sending-payload信息开始发送bl2：" class="headerlink" title="2.然后路由器上电开机，握手成功CMD会输出sending payload信息开始发送bl2："></a>2.然后路由器上电开机，握手成功CMD会输出sending payload信息开始发送bl2：</h3><p>hw code: 0x7986<br>hw sub code: 0x8a00<br>hw ver: 0xca01<br>sw ver: 0x1<br>Baud rate set to 115200<br>sending payload to 0x201000…  </p>
+<h3 id="3-发送完成加载bl2会输出信息同时开始发送fip："><a href="#3-发送完成加载bl2会输出信息同时开始发送fip：" class="headerlink" title="3.发送完成加载bl2会输出信息同时开始发送fip："></a>3.发送完成加载bl2会输出信息同时开始发送fip：</h3><p>Checksum: 0x3c82<br>Setting baudrate back to 115200<br>Jumping to 0x201000 in aarch64…<br>Waiting for BL2. Message below:  </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;    </p>
+<p>NOTICE:  BL2: v2.10.0   (release):v2.4-rc0-5845-gbacca82a8-dirty<br>NOTICE:  BL2: Built : 20:30:05, Feb  2 2024<br>NOTICE:  WDT: Cold boot<br>NOTICE:  WDT: disabled<br>NOTICE:  CPU: MT7986 (2000MHz)<br>NOTICE:  EMI: Using DDR4 settings<br>NOTICE:  EMI: Detected DRAM size: 1024MB<br>NOTICE:  EMI: complex R&#x2F;W mem test passed<br>NOTICE:  Starting UART download handshake …  </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  </p>
+<p>BL2 UART DL version: 0x10<br>Baudrate set to: 115200  </p>
+<p><strong>此时在上传fip，600KB的fip使用1500000波特率只需要几秒钟，低波特率则大概45秒。</strong><br><strong>此时如果需要进入uboot webui可以直接按住reset按键不放，等待uboot指示灯闪烁并进入uboot。</strong><br><strong>如果没有按reset会直接启动固件，进入固件再恢复刷砖的分区也行。</strong>  </p>
+<h3 id="4-fip加载完后输出："><a href="#4-fip加载完后输出：" class="headerlink" title="4.fip加载完后输出："></a>4.fip加载完后输出：</h3><p>FIP sent.  </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  </p>
+<p>NOTICE:  Received FIP 0x90b59 @ 0x40400000 …  </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  </p>
+<h5 id="此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot-webui恢复刷砖的文件。"><a href="#此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot-webui恢复刷砖的文件。" class="headerlink" title="此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot webui恢复刷砖的文件。"></a>此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot webui恢复刷砖的文件。</h5><h3 id="在Xshell中点击之前的端口会话-然后窗口内回车，查看是否变为MT7981-XR30-端口监控同时长按reset键-网口上方-10秒，然后将连接电脑主机的网线另一端插入任意-LAN"><a href="#在Xshell中点击之前的端口会话-然后窗口内回车，查看是否变为MT7981-XR30-端口监控同时长按reset键-网口上方-10秒，然后将连接电脑主机的网线另一端插入任意-LAN" class="headerlink" title="在Xshell中点击之前的端口会话 然后窗口内回车，查看是否变为MT7981&gt;  XR30 端口监控同时长按reset键 [网口上方] 10秒，然后将连接电脑主机的网线另一端插入任意 LAN"></a>在Xshell中点击之前的端口会话 然后窗口内回车，查看是否变为MT7981&gt;  XR30 端口监控同时长按reset键 [网口上方] 10秒，然后将连接电脑主机的网线另一端插入任意 <strong>LAN</strong></h3><p><strong>路由器默认uboot是<code>192.168.1.1</code> 将你的设备连接的这个新以太网接入</strong><br><strong>属性 ip 设为手动 设备ipv4 : <code>192.168.1.2</code> ,子网前缀 24 ，网关是 <code>192.168.1.1</code></strong>    </p>
+<blockquote>
+<p>Uboot WebUI 救砖<br>长按 reset 插电，直至 LED 闪过，电脑插线手动设置 ip 为 <code>192.168.1.x</code>，浏览器访问 Uboot<br>更新 Uboot 固件：<code>http://192.168.1.1/uboot.html</code> 后 会重启 断电断网重复以上刷入操作后续在webui界面上传bl2<br>更新 BL2 固件：<code>http://192.168.1.1/bl2.html</code> 后断电 先按reset键，在上电等待灯闪烁或不闪几次变白色，设置同网段，<br>更新系统固件：<code>http://192.168.1.1</code> 上传 <code>immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory.&gt; bin</code> 上传完后，自动重启 同网页会进入系统，将主机ip改为自动获取</p>
+</blockquote>
+<ul>
+<li>确保已刷入 ImmortalWRT 并能正常启动</li>
+<li>准备好两个备份文件：<br>preloader.nand.bl2 - 原厂BL2引导程序<br>Factory.bin - 原厂无线校准数据</li>
+</ul>
+<h3 id="登录ImmortalWRT并开启SSH"><a href="#登录ImmortalWRT并开启SSH" class="headerlink" title="登录ImmortalWRT并开启SSH"></a>登录ImmortalWRT并开启SSH</h3><p>浏览器访问 <code>192.168.1.1</code>  设置密码后<br>系统 → 管理权 → SSH访问 → 启用<br>在Xshell中新建会话ssh连接，用户名root 密码xxx连接到后，将原厂的两个文件放置在&#x2F;tmp&#x2F;tmp中  </p>
+<h3 id="查看当前分区信息"><a href="#查看当前分区信息" class="headerlink" title="查看当前分区信息**"></a>查看当前分区信息**</h3><blockquote>
+<p>cat &#x2F;proc&#x2F;mtd  </p>
+</blockquote>
+<p><strong>你应该看到类似这样的输出：</strong><br>dev: size erasesize name<br>mtd0: 08000000 00020000 “spi0.0”<br>mtd1: 00100000 00020000 “BL2”<br>mtd2: 00080000 00020000 “u-boot-env”<br>mtd3: 00200000 00020000 “Factory”<br>mtd4: 00200000 00020000 “FIP”<br>mtd5: 07200000 00020000 “ubi”  </p>
+<h2 id="刷写恢复原厂BL2分区（mtd0）"><a href="#刷写恢复原厂BL2分区（mtd0）" class="headerlink" title="刷写恢复原厂BL2分区（mtd0）"></a>刷写恢复原厂BL2分区（mtd0）</h2><blockquote>
+<p>mtd write &#x2F;tmp&#x2F;tmp&#x2F;preloader.nand.bl2 bl2</p>
+</blockquote>
+<h2 id="恢复原厂Factory"><a href="#恢复原厂Factory" class="headerlink" title="恢复原厂Factory"></a>恢复原厂Factory</h2><p>mtd write &#x2F;tmp&#x2F;tmp&#x2F;Factory.bin factory</p>
+<h2 id="重启路由器"><a href="#重启路由器" class="headerlink" title="重启路由器"></a>重启路由器</h2><p>reboot<br>此系统更新的系统固件：immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory<br>后续更新为：immortalwrt-mediatek-filogic-cmcc_xr30-nand-squashfs-sysupgrade</p>
+<p>救砖思路引用参考:<br><a target="_blank" rel="noopener" href="https://heeteve-blog.pages.dev/2025/09/XR30%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/">XR30 路由器折腾笔记</a><br><a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/thread-8425531-1-1.html">W25N02KVZEIR mt7981 xr30 128m 的想换更大的闪存</a><br>后续更新参考：<br><a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=8444519&extra=&highlight=xr30&page=1">CMCC-XR30 编译237大佬的ImmortalWRT，带HNAT</a><br><a target="_blank" rel="noopener" href="https://gitee.com/kcro/openwrt-firmware/releases/">对应上方的编译固件地址，使用日期：25-09-07 </a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+    
+  <nav id="article-nav" class="wow fadeInUp">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="Welcome to My Blog!| 欢迎光临！ |¡Bienvenidos a Mi Blog!" class="lazyload">
+        
+      
+      <a href="/2025/01/18/%C2%A1Bienvenidos-a-Mi-Blog%EF%BC%81%E6%AC%A2%E8%BF%8E%E5%85%89%E4%B8%B4%EF%BC%81Welcome-to-My-Blog/"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+        
+          Welcome to My Blog!| 欢迎光临！ |¡Bienvenidos a Mi Blog!
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+  
+</article>
+
+
+
+
+
+
+</section>
+          
+        </div>
+        <footer id="footer" class="wow fadeInUp">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      <div>
+        <span class="icon-copyright"></span>
+        2020-2026
+        <span class="footer-info-sep"></span>
+        Aranya-玥无酱
+      </div>
+      
+        <div>
+          基于&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
+          Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
+        </div>
+      
+      
+        <div>
+          <span class="icon-brush"></span>
+          70.5k
+          &nbsp;|&nbsp;
+          <span class="icon-coffee"></span>
+          03:55
+        </div>
+      
+      
+        <div>
+          <span class="icon-eye"></span>
+          <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+          &nbsp;|&nbsp;
+          <span class="icon-user"></span>
+          <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        </div>
+      
+    </div>
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/images/taichi.png" height="50" width="50" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">XR30 换华邦 128mb Winbond W25N01GVZEIG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%95%91%E7%A0%96"><span class="toc-number">2.</span> <span class="toc-text">前置救砖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%90%8E%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%AD%89%E5%BE%85%E6%8F%A1%E6%89%8B%E4%BF%A1%E6%81%AF%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">1.运行命令后会出现等待握手信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%84%B6%E5%90%8E%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E7%94%B5%E5%BC%80%E6%9C%BA%EF%BC%8C%E6%8F%A1%E6%89%8B%E6%88%90%E5%8A%9FCMD%E4%BC%9A%E8%BE%93%E5%87%BAsending-payload%E4%BF%A1%E6%81%AF%E5%BC%80%E5%A7%8B%E5%8F%91%E9%80%81bl2%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">2.然后路由器上电开机，握手成功CMD会输出sending payload信息开始发送bl2：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%91%E9%80%81%E5%AE%8C%E6%88%90%E5%8A%A0%E8%BD%BDbl2%E4%BC%9A%E8%BE%93%E5%87%BA%E4%BF%A1%E6%81%AF%E5%90%8C%E6%97%B6%E5%BC%80%E5%A7%8B%E5%8F%91%E9%80%81fip%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">3.发送完成加载bl2会输出信息同时开始发送fip：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-fip%E5%8A%A0%E8%BD%BD%E5%AE%8C%E5%90%8E%E8%BE%93%E5%87%BA%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">4.fip加载完后输出：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A4%E6%97%B6%E7%A8%8B%E5%BA%8F%E5%B7%B2%E7%BB%8F%E6%89%A7%E8%A1%8C%E5%AE%8C%EF%BC%8C%E5%B7%B2%E7%BB%8F%E5%8A%A0%E8%BD%BDuboot%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E6%8C%89reset%E4%BC%9A%E7%9B%B4%E6%8E%A5%E5%90%AF%E5%8A%A8%E5%9B%BA%E4%BB%B6%EF%BC%8C%E6%8C%89reset%E5%B0%B1%E8%BF%9B%E5%85%A5uboot-webui%E6%81%A2%E5%A4%8D%E5%88%B7%E7%A0%96%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">2.4.0.1.</span> <span class="toc-text">此时程序已经执行完，已经加载uboot，如果没有按reset会直接启动固件，按reset就进入uboot webui恢复刷砖的文件。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Xshell%E4%B8%AD%E7%82%B9%E5%87%BB%E4%B9%8B%E5%89%8D%E7%9A%84%E7%AB%AF%E5%8F%A3%E4%BC%9A%E8%AF%9D-%E7%84%B6%E5%90%8E%E7%AA%97%E5%8F%A3%E5%86%85%E5%9B%9E%E8%BD%A6%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E5%8F%98%E4%B8%BAMT7981-XR30-%E7%AB%AF%E5%8F%A3%E7%9B%91%E6%8E%A7%E5%90%8C%E6%97%B6%E9%95%BF%E6%8C%89reset%E9%94%AE-%E7%BD%91%E5%8F%A3%E4%B8%8A%E6%96%B9-10%E7%A7%92%EF%BC%8C%E7%84%B6%E5%90%8E%E5%B0%86%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E4%B8%BB%E6%9C%BA%E7%9A%84%E7%BD%91%E7%BA%BF%E5%8F%A6%E4%B8%80%E7%AB%AF%E6%8F%92%E5%85%A5%E4%BB%BB%E6%84%8F-LAN"><span class="toc-number">2.5.</span> <span class="toc-text">在Xshell中点击之前的端口会话 然后窗口内回车，查看是否变为MT7981&gt;  XR30 端口监控同时长按reset键 [网口上方] 10秒，然后将连接电脑主机的网线另一端插入任意 LAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95ImmortalWRT%E5%B9%B6%E5%BC%80%E5%90%AFSSH"><span class="toc-number">2.6.</span> <span class="toc-text">登录ImmortalWRT并开启SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">2.7.</span> <span class="toc-text">查看当前分区信息**</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%86%99%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%8E%82BL2%E5%88%86%E5%8C%BA%EF%BC%88mtd0%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">刷写恢复原厂BL2分区（mtd0）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%8E%82Factory"><span class="toc-number">4.</span> <span class="toc-text">恢复原厂Factory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AF%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">重启路由器</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/reimu.gif" data-sizes="auto" alt="Aranya-玥无酱" class="lazyload">
+  <div class="sidebar-author-name">Aranya-玥无酱</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class=icon-github>
+      <a href=https://github.com/Aranyaveritas itemprop="url" target="_blank" aria-label="github"></a>
+    </div>
+  
+    <div class=icon-bilibili>
+      <a href=https://space.bilibili.com/396145021/ itemprop="url" target="_blank" aria-label="bilibili"></a>
+    </div>
+  
+    <div class=icon-discord>
+      <a href=https://discordapp.com/users/yourname itemprop="url" target="_blank" aria-label="discord"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    <div class="site-search">
+      <div class="reimu-popup popup">
+        <div class="reimu-search">
+          <span class="reimu-search-input-icon"></span>
+          <div class="reimu-search-input" id="reimu-search-input"></div>
+        </div>
+        <div class="reimu-results">
+          <div id="reimu-stats"></div>
+          <div id="reimu-hits"></div>
+          <div id="reimu-pagination" class="reimu-pagination"></div>
+        </div>
+        <span class="popup-btn-close"></span>
+      </div>
+    </div>
+    
+<script src="https://npm.webcache.cn/jquery@3.7.1/dist/jquery.min.js"></script>
+
+
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+<script type="module" data-pjax>
+  import PhotoSwipeLightbox from "https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js";
+  
+  const pswp = () => {
+    if (document.querySelectorAll('.article-entry a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-entry',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    if(document.querySelectorAll('.article-gallery a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-gallery',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    window.lightboxStatus = 'done';
+    window.removeEventListener('lightbox:ready', pswp);
+  }
+  if(window.lightboxStatus === 'ready') {
+    pswp()
+  } else {
+    window.addEventListener('lightbox:ready', pswp);
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.4/dist/index.umd.js"></script>
+
+  <script>
+    firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+  <script>
+    function initLive2d() {
+      live2d.init("https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/", {themeTipsPath: ""});
+    }
+  </script>
+  
+<script src="https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/js/live2d-autoload.js" onload="initLive2d &amp;&amp; initLive2d()" async></script>
+
+
+
+<div id="lazy-script">
+  <div>
+    
+  </div>
+</div>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.2.0-beta.1' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+  <!-- hexo injector body_end start -->
+<script src="/js/insert_highlight.js" data-pjax></script>
+<!-- hexo injector body_end end --></body>
+  </html>
+
